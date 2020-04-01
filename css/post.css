@@ -1,0 +1,84 @@
+@import "font.css";
+@import 'social.css';
+@import 'quote.css';
+@import 'button.css';
+@import "blogfooter.css";
+
+#container {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 200px 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas: "hd" "bd";
+}
+
+#headimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 145px;
+    height: 145px;
+    margin-top: 15px;
+}
+
+#aboutauthor {
+    display: none;
+}
+
+#postheader {
+    padding: 10px;
+    background-color: #6495ED;
+    grid-area: hd;
+}
+  
+h1 {
+    font-size: 30px;
+}
+
+#postarticle {
+    grid-area: bd;
+    text-align: justify;
+}
+
+
+@media (min-width:900px) {
+    #container {
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 200px 1fr;
+        grid-template-columns: 70% 30%;
+        grid-template-areas: "hd hd" "bd sd";
+    }
+
+    #aboutauthor {
+        grid-area: sd;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+        margin-left: 30px;
+        background-color: #F0F8FF;
+        padding-left: 30px; 
+        padding-right: 30px;  
+        align-items: center;
+    }
+    #social {
+        margin-top: 30px;
+    }
+    
+    #authorname {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: large;
+    }
+    
+    #mypic {
+        display: block;
+        width: 145px;
+        height: 205px;
+        margin-top: 15px;
+    }
+    #bio {
+        text-align: justify;
+    }    
+}
+

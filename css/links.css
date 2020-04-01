@@ -1,0 +1,18 @@
+a.lnk:link {
+    color: rgb(119, 0, 255);
+}
+
+/* visited link */
+a.lnk:visited {
+    color: rgb(0, 128, 11);
+}
+
+/* mouse over link */
+a.lnk:hover {
+    color: rgba(235, 59, 59, 0.884);
+}
+
+/* selected link */
+a.lnk:active {
+    color: blue;
+}

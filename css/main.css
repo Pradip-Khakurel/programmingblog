@@ -1,0 +1,120 @@
+@import "font.css";
+@import "links.css";
+@import "tag.css";
+@import "blogfooter.css";
+
+#container {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 200px 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas: "hd" "bd";
+}
+
+#sidebar {
+    display: none;
+}
+
+#blogheader {
+    grid-area: hd;
+    background-image: url("../img/coding.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+
+#blogtitle {
+    text-align: right;
+    margin-top: 150px;
+    margin-right: 20px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+#posts {
+    grid-area: bd;
+}
+
+.post > time {
+    font-weight: bold;
+    color: grey;
+    font-size: small;
+}
+
+.post {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 15px;
+    line-height: 1.5;    
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.postelement {
+    margin-bottom: 5px;
+}
+
+.post:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.post > h1 {
+    display: flex;
+    color: #FF4136;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.post>summary {
+    margin-bottom: 10px;
+}
+
+@media (min-width:900px) {
+    #container {
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 200px 1fr;
+        grid-template-columns: 70% 30%;
+        grid-template-areas: "hd hd" "bd sd";
+    }
+
+    #sidebar {
+        grid-area: sd;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "ar" "tg";
+        grid-gap: 5px;
+        margin-left: 30px;        
+    }
+
+    #sidebar .sidebarbox {
+        background-color: #F0F8FF;
+        padding-left: 30px;
+    }
+
+    #sidebar #archivesbox {
+        grid-area: ar;      
+    }
+
+    #sidebar #tagsbox {
+        grid-area: tg;
+    } 
+
+    #sidebar ul {
+        list-style: none;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    .archives li {
+       margin-top: 10px;
+       margin-left: 0px;
+       padding-left: 0px;
+    }
+}
