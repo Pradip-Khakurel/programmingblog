@@ -2,6 +2,7 @@
 @import "links.css";
 @import "tag.css";
 @import "blogfooter.css";
+@import "button.css";
 
 #container {
     display: grid;
@@ -9,6 +10,8 @@
     grid-template-rows: 200px 1fr;
     grid-template-columns: 100%;
     grid-template-areas: "hd" "bd";
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #sidebar {
@@ -54,15 +57,11 @@
     transition: 0.3s;
 }
 
-.postelement {
-    margin-bottom: 5px;
-}
-
 .post:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.post > h1 {
+.post > h2 {
     display: flex;
     color: #FF4136;
     padding: 0px;
@@ -70,8 +69,49 @@
     margin-bottom: 5px;
 }
 
-.post>summary {
+.postimgarea {
+    height: 100px;
     margin-bottom: 10px;
+}
+
+.postimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75px;
+    margin-top: 15px;
+}
+
+#kubeimgarea {
+    background-color: #6495ED;
+}
+
+#sparkimgarea {
+    background-color: #DEB887;
+}
+
+#zookeeperimgarea {
+    background-color: #8FBC8F;
+}
+
+#kafkaimgarea {
+    background-color: #DCDCDC;
+}
+
+#hadoopimgarea {
+    background-color: #FFA07A;
+}
+
+.post > summary {
+    margin-bottom: 10px;
+}
+
+.post button {
+    width: 100%;
+    height: 30px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
 }
 
 @media (min-width:900px) {
@@ -90,7 +130,7 @@
         grid-template-rows: auto 1fr;
         grid-template-areas: "ar" "tg";
         grid-gap: 5px;
-        margin-left: 30px;        
+        margin-left: 15px;        
     }
 
     #sidebar .sidebarbox {
